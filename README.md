@@ -1,25 +1,41 @@
-# 190E Archive
+# Automotive Archive 3D
 
-A responsive automotive archive with a searchable vehicle collection and separate detail pages. The landing hero uses the supplied looping car video; the dedicated 190E page contains the story, photographs, specifications, and interactive 3D viewer. Mercedes-Benz, BMW, and Mercedes-AMG filters are ready for future entries.
+An interactive digital archive for remarkable cars.
 
-## Run locally on Windows
+Explore each vehicle through its story, key specifications, studio photographs, and an interactive 3D model.
 
-1. Install Python from [python.org](https://www.python.org/downloads/) if it is not already installed. During setup, enable **Add Python to PATH**.
-2. Double-click `start-local.bat`.
-3. The site opens at `http://localhost:8000`. Keep the black command window open while using it.
+## Featured vehicles
 
-The homepage video, photos, and GLB model are included in `assets`. The 190E 3D viewer uses Three.js and its Draco decoder from jsDelivr, so the 3D viewer needs an internet connection. The 190E photo appears as the hero's fallback poster if the video cannot play.
+- Mercedes-Benz 190E · W201
+- Mercedes-AMG GT R
+- BMW M3 Competition · G80
 
-## Main files
+## Explore the archive
 
-- `index.html` — collection landing page and brand filters
-- `mercedes-190e.html` — dedicated 190E story, 3D studio, photos, and specifications
-- `styles.css` — responsive visual design
-- `main.js` — interactive 3D viewer for the 190E page
-- `catalog.js` — collection search, filters, and sorting
-- `assets/models/mercedes-190e.glb` — 3D car model
-- `assets/images/` — supplied views for the page
-- `assets/videos/hero-car.mp4` — supplied looping hero video
+Each vehicle has its own dedicated page with:
 
+- Interactive 3D viewer
+- Camera controls and auto rotation
+- Colour selection: silver, black, red, blue, or a custom colour
+- Design story and specifications
+- Curated studio photographs
+- Responsive experience for phone and desktop
 
-Version 8 adds colour controls to every 3D viewer: silver, black, red, blue, and a custom colour picker. The local server uses port 8007.
+## Technologies
+
+- HTML
+- CSS
+- JavaScript
+- Three.js
+- GLB 3D models
+
+## Run locally
+
+1. Download or clone this repository.
+2. Open the project folder.
+3. Double-click `start-local.bat`.
+4. Open `http://127.0.0.1:8007/` in your browser.
+
+## Roadmap
+
+More vehicles, more marques, and more interactive automotive stories will be added to the collection.
