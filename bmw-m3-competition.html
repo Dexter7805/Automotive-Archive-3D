@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#101214" />
+    <meta name="description" content="Explore the BMW M3 Competition: its design, photographs, specifications, and an interactive 3D model." />
+    <title>BMW M3 Competition — Performance Archive</title>
+    <link rel="preload" as="image" href="./assets/images/bmw-m3-3d-views/05-left-45.png" />
+    <link rel="stylesheet" href="./styles.css" />
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://cdn.jsdelivr.net/npm/three@0.177.0/build/three.module.js",
+          "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.177.0/examples/jsm/"
+        }
+      }
+    </script>
+    <script type="module" src="./bmw-main.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header" id="top">
+      <a class="brand" href="./index.html#collection" aria-label="Back to the car collection">
+        <span class="brand__mark" aria-hidden="true">W</span>
+        <span class="brand__copy"><span>BMW M / ARCHIVE</span><strong>M3 COMPETITION</strong></span>
+      </a>
+      <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false">
+        <span></span><span></span>
+      </button>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="#overview">Overview</a>
+        <a href="#story">Story &amp; heritage</a>
+        <a href="#studio">3D studio</a>
+        <a href="#photographs">Photographs</a>
+        <a href="#specifications">Details</a>
+        <a href="./index.html#collection">Collection</a>
+      </nav>
+      <a class="header-cta" href="#studio">Explore the 3D model <span aria-hidden="true">↗</span></a>
+    </header>
+
+    <main id="main">
+      <section class="hero" id="overview" aria-labelledby="hero-title">
+        <img class="hero__image" src="./assets/images/bmw-m3-3d-views/05-left-45.png" alt="Silver BMW M3 Competition in a studio" />
+        <div class="hero__veil"></div>
+        <div class="hero__content">
+          <p class="eyebrow hero__eyebrow"><span class="eyebrow__line"></span> BMW M archive · M3 Competition</p>
+          <h1 id="hero-title">Engineered for<br /><em>the apex.</em></h1>
+          <p class="hero__lede">The BMW M3 Competition brings motorsport character, four-door practicality, and a focused twin-turbo straight-six to the road.</p>
+          <div class="hero__actions">
+            <a class="button button--light" href="#studio">Explore the 3D model <span aria-hidden="true">↗</span></a>
+            <a class="text-link text-link--light" href="#story">Discover its story <span aria-hidden="true">↓</span></a>
+          </div>
+        </div>
+        <div class="hero__index"><span>02</span><span class="hero__index-rule"></span><span>04</span></div>
+        <p class="hero__caption">BMW M3 Competition <span>·</span> High-performance saloon</p>
+      </section>
+
+      <section class="fact-strip" aria-label="At a glance">
+        <div class="fact-strip__intro"><span class="eyebrow">Built around the driver</span><p>Four doors.<br />One clear purpose.</p></div>
+        <div class="fact"><span class="fact__label">Engine</span><strong>3.0 L M TwinPower Turbo</strong></div>
+        <div class="fact"><span class="fact__label">Output</span><strong>375 kW · 510 PS</strong></div>
+        <div class="fact"><span class="fact__label">0–100 km/h</span><strong>3.9 seconds</strong></div>
+      </section>
+
+      <section class="story section-pad" id="story" aria-labelledby="story-title">
+        <div class="story__heading">
+          <p class="eyebrow"><span class="eyebrow__line"></span> Motorsport, made usable</p>
+          <h2 id="story-title">A sports saloon<br /><em>with a racing pulse.</em></h2>
+        </div>
+        <div class="story__copy">
+          <p class="story__lead">The M3 Competition pairs a high-output straight-six with rear-wheel drive and a chassis shaped for exact, confident control.</p>
+          <p>Wide arches, a purposeful front end, and a compact rear spoiler give this generation of M3 a clear sense of intent. Explore the exterior from every angle in the interactive studio below.</p>
+          <a class="text-link" href="#specifications">Read the model notes <span aria-hidden="true">↗</span></a>
+        </div>
+        <figure class="story__image story__image--large">
+          <img src="./assets/images/bmw-m3-3d-views/03-left.png" alt="Side profile of the BMW M3 Competition" loading="lazy" />
+          <figcaption><span>01 / Profile</span><span>Purpose in every line</span></figcaption>
+        </figure>
+        <figure class="story__image story__image--small">
+          <img src="./assets/images/bmw-m3-3d-views/02-back.png" alt="Rear view of the BMW M3 Competition" loading="lazy" />
+          <figcaption><span>02 / Rear view</span><span>Performance from every angle</span></figcaption>
+        </figure>
+      </section>
+
+      <section class="studio" id="studio" aria-labelledby="studio-title">
+        <div class="studio__top section-pad">
+          <div>
+            <p class="eyebrow eyebrow--light"><span class="eyebrow__line"></span> Digital collection · 03</p>
+            <h2 id="studio-title">Meet the M3<br /><em>in three dimensions.</em></h2>
+          </div>
+          <p class="studio__intro">Drag to orbit, scroll to zoom, and use the view controls to explore the BMW from every side.</p>
+        </div>
+        <div class="viewer-shell">
+          <div class="viewer-meta"><span><i class="status-dot"></i> Interactive model</span><span>BMW M3 Competition · G80</span></div>
+          <div class="viewer" id="viewer">
+            <canvas id="viewer-canvas" aria-label="Interactive 3D view of the BMW M3 Competition"></canvas>
+            <div class="viewer-fallback" id="viewer-fallback">
+              <img src="./assets/images/bmw-m3-3d-views/05-left-45.png" alt="Silver BMW M3 Competition" />
+            </div>
+            <div class="viewer-loading" id="viewer-loading"><span class="loader-ring"></span><span>Preparing the model</span></div>
+            <div class="viewer-error" id="viewer-error" hidden>The 3D view could not load. The photographs are still available above.</div>
+            <div class="viewer-hint"><span class="mouse-icon" aria-hidden="true"></span> Drag to rotate <i>·</i> Scroll to zoom</div>
+          </div>
+          <div class="viewer-controls">
+            <div class="view-tabs" role="group" aria-label="Model camera view">
+              <button class="view-tab is-active" data-view="hero" type="button">Hero</button>
+              <button class="view-tab" data-view="side" type="button">Side</button>
+              <button class="view-tab" data-view="front" type="button">Front</button>
+              <button class="view-tab" data-view="rear" type="button">Rear</button>
+            </div>
+            <div class="paint-picker" role="group" aria-label="Choose car colour">
+              <span class="paint-picker__label">Finish</span>
+              <button class="color-swatch is-active" type="button" data-color="#d6d9dc" aria-label="Choose silver" aria-pressed="true" style="--swatch: #d6d9dc"></button>
+              <button class="color-swatch" type="button" data-color="#17191c" aria-label="Choose black" aria-pressed="false" style="--swatch: #17191c"></button>
+              <button class="color-swatch" type="button" data-color="#c9252d" aria-label="Choose red" aria-pressed="false" style="--swatch: #c9252d"></button>
+              <button class="color-swatch" type="button" data-color="#315a8b" aria-label="Choose blue" aria-pressed="false" style="--swatch: #315a8b"></button>
+              <label class="custom-color" title="Choose any colour"><span class="sr-only">Choose any colour</span><input id="custom-color" type="color" value="#d6d9dc" /></label>
+            </div>
+            <button class="rotate-button" id="rotate-button" type="button" aria-pressed="false"><span aria-hidden="true">↻</span> Auto rotate</button>
+          </div>
+        </div>
+        <div class="studio__foot section-pad"><span>03 / 03</span><span>BMW M3 Competition · A closer perspective</span><span>Use mouse or touch to explore</span></div>
+      </section>
+
+      <section class="gallery section-pad" id="photographs" aria-labelledby="gallery-title">
+        <div class="section-heading">
+          <div><p class="eyebrow"><span class="eyebrow__line"></span> The image archive</p><h2 id="gallery-title">Details worth<br /><em>a second look.</em></h2></div>
+          <p>Reference views of the M3 Competition, from the front profile to its compact rear spoiler.</p>
+        </div>
+        <div class="gallery-grid">
+          <figure class="gallery-card gallery-card--wide"><img src="./assets/images/bmw-m3-3d-views/01-front-required.png" alt="Front view of the BMW M3 Competition" loading="lazy" /><figcaption><span>01</span><strong>Front</strong><span>Signature M kidney grille.</span></figcaption></figure>
+          <figure class="gallery-card"><img src="./assets/images/bmw-m3-3d-views/05-left-45.png" alt="Front three-quarter view of the BMW M3 Competition" loading="lazy" /><figcaption><span>02</span><strong>Three-quarter</strong><span>Wide stance, sharp response.</span></figcaption></figure>
+          <figure class="gallery-card"><img src="./assets/images/bmw-m3-3d-views/02-back.png" alt="Rear view of the BMW M3 Competition" loading="lazy" /><figcaption><span>03</span><strong>Rear</strong><span>Four exhaust outlets in view.</span></figcaption></figure>
+        </div>
+      </section>
+
+      <section class="specifications section-pad" id="specifications" aria-labelledby="specs-title">
+        <div class="specifications__heading"><p class="eyebrow eyebrow--light"><span class="eyebrow__line"></span> Model notes</p><h2 id="specs-title">The essentials,<br /><em>beautifully resolved.</em></h2></div>
+        <div class="spec-list">
+          <div><span>Model</span><strong>BMW M3 Competition</strong></div>
+          <div><span>Engine</span><strong>3.0-litre M TwinPower Turbo I6</strong></div>
+          <div><span>Peak output</span><strong>375 kW · 510 PS</strong></div>
+          <div><span>0–100 km/h</span><strong>3.9 seconds</strong></div>
+          <div><span>Top speed</span><strong>250 km/h</strong></div>
+          <div><span>Body</span><strong>Four-door sports saloon</strong></div>
+        </div>
+        <p class="specifications__note">Performance figures are for the BMW M3 Competition rear-wheel-drive specification shown in this archive.</p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <a class="brand brand--footer" href="./index.html#collection"><span class="brand__mark" aria-hidden="true">W</span><span class="brand__copy"><span>BMW M / ARCHIVE</span><strong>M3 COMPETITION</strong></span></a>
+      <p>The BMW M3 Competition · A dedicated model archive.</p>
+      <a class="footer-top" href="#top">Back to top ↑</a>
+    </footer>
+  </body>
+</html>

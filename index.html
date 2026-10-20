@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#101214" />
+    <meta name="description" content="Browse the automotive archive by marque and open each car's dedicated story, photographs, specifications, and 3D model." />
+    <title>Automotive Archive — Discover the Collection</title>
+    <link rel="preload" as="image" href="./assets/images/mercedes-190e-three-quarter.png" />
+    <link rel="stylesheet" href="./styles.css" />
+    <script defer src="./catalog.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header" id="top">
+      <a class="brand" href="#top" aria-label="Automotive Archive home">
+        <span class="brand__mark" aria-hidden="true">W</span>
+        <span class="brand__copy"><span>THE AUTOMOTIVE</span><strong>ARCHIVE</strong></span>
+      </a>
+      <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false">
+        <span></span><span></span>
+      </button>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="#top">Home</a>
+        <a href="#collection">Collection</a>
+        <a href="#about">About the archive</a>
+      </nav>
+      <a class="header-cta" href="#collection">Browse the cars <span aria-hidden="true">↗</span></a>
+    </header>
+
+    <main id="main">
+      <section class="hero collection-hero" id="overview" aria-labelledby="hero-title">
+        <img class="hero__image" src="./assets/images/mercedes-190e-three-quarter.png" alt="" aria-hidden="true" />
+        <video class="hero__video" autoplay muted loop playsinline preload="metadata" poster="./assets/images/mercedes-190e-three-quarter.png" aria-hidden="true">
+          <source src="./assets/videos/hero-car.mp4" type="video/mp4" />
+        </video>
+        <div class="hero__veil"></div>
+        <div class="hero__content">
+          <p class="eyebrow hero__eyebrow"><span class="eyebrow__line"></span> The automobile archive · Volume 01</p>
+          <h1 id="hero-title">A collection<br /><em>of icons.</em></h1>
+          <p class="hero__lede">Explore remarkable cars, one model at a time. Every vehicle has its own archive of photographs, history, details, and 3D.</p>
+          <div class="hero__actions">
+            <a class="button button--light" href="./mercedes-190e.html">Enter the 190E archive <span aria-hidden="true">↗</span></a>
+            <a class="button button--outline" href="#collection">Browse the collection <span aria-hidden="true">↓</span></a>
+          </div>
+        </div>
+        <p class="hero__caption">The 190E archive <span>·</span> A moving automotive portrait</p>
+      </section>
+
+      <section class="fact-strip" aria-label="Collection overview">
+        <div class="fact-strip__intro"><span class="eyebrow">A living collection</span><p>Every car has<br />its own story.</p></div>
+        <div class="fact"><span class="fact__label">Marques</span><strong>Mercedes-Benz · BMW · AMG</strong></div>
+        <div class="fact"><span class="fact__label">Explore</span><strong>Photos · Stories · 3D</strong></div>
+        <div class="fact"><span class="fact__label">Collection</span><strong id="hero-car-count">03 models</strong></div>
+      </section>
+
+      <section class="collection section-pad" id="collection" aria-labelledby="collection-title">
+        <div class="catalog-heading">
+          <div><p class="eyebrow"><span class="eyebrow__line"></span> The automobile archive</p><h2 id="collection-title">Find your next<br /><em>automotive icon.</em></h2></div>
+          <p>Browse by marque or search for a model. Choose a car to enter its own dedicated page with all its details.</p>
+        </div>
+        <div class="catalog-toolbar">
+          <div class="brand-filters" role="group" aria-label="Filter cars by brand">
+            <button class="brand-filter is-active" type="button" data-brand="all" aria-pressed="true">All models <span>03</span></button>
+            <button class="brand-filter" type="button" data-brand="Mercedes-Benz" aria-pressed="false">Mercedes-Benz</button>
+            <button class="brand-filter" type="button" data-brand="BMW" aria-pressed="false">BMW</button>
+            <button class="brand-filter" type="button" data-brand="Mercedes-AMG" aria-pressed="false">Mercedes-AMG</button>
+          </div>
+          <div class="catalog-controls">
+            <label class="catalog-search"><span class="sr-only">Search cars</span><span aria-hidden="true">⌕</span><input id="car-search" type="search" placeholder="Search cars" autocomplete="off" /></label>
+            <label class="catalog-sort"><span class="sr-only">Sort cars</span><select id="car-sort"><option value="year-desc">Newest year</option><option value="year-asc">Oldest year</option><option value="name-asc">Name A—Z</option></select></label>
+          </div>
+        </div>
+        <p class="catalog-count" id="catalog-count" aria-live="polite"></p>
+        <div class="car-grid" id="car-grid">
+          <article class="car-card" data-brand="Mercedes-Benz" data-year="1990" data-name="Mercedes-Benz 190E" data-search="Mercedes-Benz 190E W201 2.5-16 Evolution II 1990 silver">
+            <a class="car-card__image" href="./mercedes-190e.html" aria-label="Enter the Mercedes-Benz 190E archive">
+              <img src="./assets/images/mercedes-190e-three-quarter.png" alt="Mercedes-Benz 190E in silver, front three-quarter view" loading="lazy" />
+              <span class="car-card__badge">3D model ready</span>
+            </a>
+            <button class="car-card__favorite" type="button" aria-label="Add Mercedes-Benz 190E to favorites" aria-pressed="false">♡</button>
+            <div class="car-card__body">
+              <p class="car-card__brand">Mercedes-Benz · W201</p>
+              <h3 class="car-card__title">Mercedes-Benz 190E</h3>
+              <p class="car-card__edition">2.5-16 Evolution II · 1990</p>
+              <div class="car-card__facts"><span><b>⌖</b> 1982—1993</span><span><b>◉</b> 2.5 L · 16V</span><span><b>↗</b> Rear-wheel drive</span><span><b>✳</b> Silver metallic</span></div>
+              <a class="car-card__action" href="./mercedes-190e.html">Enter the 190E archive <span aria-hidden="true">↗</span></a>
+            </div>
+          </article>
+          <article class="car-card" data-brand="Mercedes-AMG" data-year="2017" data-name="Mercedes-AMG GT R" data-search="Mercedes-AMG GT R C190 4.0 V8 biturbo coupe silver 585 PS">
+            <a class="car-card__image" href="./amg-gt-r.html" aria-label="Enter the Mercedes-AMG GT R archive">
+              <img src="./assets/images/amg-gt-r-3d-views/05-right-45.png" alt="Silver Mercedes-AMG GT R in front three-quarter view" loading="lazy" />
+              <span class="car-card__badge">3D model ready</span>
+            </a>
+            <button class="car-card__favorite" type="button" aria-label="Add Mercedes-AMG GT R to favorites" aria-pressed="false">♡</button>
+            <div class="car-card__body">
+              <p class="car-card__brand">Mercedes-AMG · GT</p>
+              <h3 class="car-card__title">Mercedes-AMG GT R</h3>
+              <p class="car-card__edition">4.0 V8 biturbo · Silver</p>
+              <div class="car-card__facts"><span><b>⌖</b> GT coupe</span><span><b>◉</b> 4.0 L · V8</span><span><b>↗</b> Rear-wheel drive</span><span><b>✳</b> 585 PS</span></div>
+              <a class="car-card__action" href="./amg-gt-r.html">Enter the GT R archive <span aria-hidden="true">↗</span></a>
+            </div>
+          </article>
+          <article class="car-card" data-brand="BMW" data-year="2023" data-name="BMW M3 Competition" data-search="BMW M3 Competition G80 2023 M TwinPower Turbo silver sedan 510 PS">
+            <a class="car-card__image" href="./bmw-m3-competition.html" aria-label="Enter the BMW M3 Competition archive">
+              <img src="./assets/images/bmw-m3-3d-views/05-left-45.png" alt="Silver BMW M3 Competition in front three-quarter view" loading="lazy" />
+              <span class="car-card__badge">3D model ready</span>
+            </a>
+            <button class="car-card__favorite" type="button" aria-label="Add BMW M3 Competition to favorites" aria-pressed="false">♡</button>
+            <div class="car-card__body">
+              <p class="car-card__brand">BMW M · G80</p>
+              <h3 class="car-card__title">BMW M3 Competition</h3>
+              <p class="car-card__edition">3.0 M TwinPower Turbo · Silver</p>
+              <div class="car-card__facts"><span><b>⌖</b> Sports saloon</span><span><b>◉</b> 3.0 L · I6</span><span><b>↗</b> Rear-wheel drive</span><span><b>✳</b> 510 PS</span></div>
+              <a class="car-card__action" href="./bmw-m3-competition.html">Enter the M3 archive <span aria-hidden="true">↗</span></a>
+            </div>
+          </article>
+        </div>
+        <div class="catalog-empty" id="catalog-empty" hidden>
+          <span class="catalog-empty__mark" aria-hidden="true">✳</span>
+          <p class="eyebrow">More legends are on their way</p>
+          <h3>No cars match this selection yet.</h3>
+          <p>Choose another marque or clear the search to browse the current archive.</p>
+          <button class="catalog-reset" id="catalog-reset" type="button">Show all models <span aria-hidden="true">↗</span></button>
+        </div>
+      </section>
+
+      <section class="archive-note section-pad" id="about">
+        <p class="eyebrow eyebrow--light"><span class="eyebrow__line"></span> One model per archive</p>
+        <p>Open a car to find its story, interactive 3D, photographs, and specifications together on a page of its own.</p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <a class="brand brand--footer" href="#top"><span class="brand__mark" aria-hidden="true">W</span><span class="brand__copy"><span>THE AUTOMOTIVE</span><strong>ARCHIVE</strong></span></a>
+      <p>A dedicated space for remarkable machines.</p>
+      <a class="footer-top" href="#top">Back to top ↑</a>
+    </footer>
+  </body>
+</html>
